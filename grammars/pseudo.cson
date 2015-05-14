@@ -1,20 +1,20 @@
 'scopeName': 'source.pseudo'
 'fileTypes': [
-  'pseudo'
   'sdo'
+  'pseudo'
   ]
 'name': 'IB PseudoCode'
 'patterns': [
   {
     'captures':
       '2':
-        'name': 'entity.name.function.js'
+        'name': 'entity.name.function.sdo'
     'match': '([a-zA-Z_?.$][\\w?.$]*)\\.([a-zA-Z_?.$][\\w?.$]*)\\s*'
-    'name': 'meta.function.js'
+    'name': 'meta.function.sdo'
   }
   {
     'match': '\\b((0(x|X)[0-9a-fA-F]+)|(0(b|B)[01]+)|(0(o|O)[0-7]+)|([0-9]+(\\.[0-9]+)?)((e|E)[+-]?[0-9]+)?)\\b'
-    'name': 'constant.numeric.js'
+    'name': 'constant.numeric.sdo'
   }
   {
     'include': '#strings'
@@ -26,96 +26,96 @@
     'begin': '(^[ \\t]+)?(?=//)'
     'beginCaptures':
       '1':
-        'name': 'punctuation.whitespace.comment.leading.js'
+        'name': 'punctuation.whitespace.comment.leading.sdo'
     'end': '(?!\\G)'
     'patterns': [
       {
         'begin': '//'
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.comment.js'
+            'name': 'punctuation.definition.comment.sdo'
         'end': '\\n'
-        'name': 'comment.line.double-slash.js'
+        'name': 'comment.line.double-slash.sdo'
       }
     ]
   }
   {
     'match': '(?<!\\.)\\b(else|loop|if|from|to|end|while|then)(?!\\s*:)\\b'
-    'name': 'keyword.control.js'
+    'name': 'keyword.control.sdo'
   }
   {
     'match': '(?<!\\.)\\btrue(?!\\s*:)\\b'
-    'name': 'constant.language.boolean.true.js'
+    'name': 'constant.language.boolean.true.sdo'
   }
   {
     'match': '(?<!\\.)\\bfalse(?!\\s*:)\\b'
-    'name': 'constant.language.boolean.false.js'
+    'name': 'constant.language.boolean.false.sdo'
   }
   {
     'captures':
       '1':
-        'name': 'support.function.js'
+        'name': 'support.function.sdo'
     'match': '(?!>\\S)(\\boutput)(\\s)'
   }
   {
     'captures':
       '1':
-        'name': 'support.function.js'
+        'name': 'support.function.sdo'
     'match': '(?!>\\S)(\\boutput)(\\s)'
   }
   {
     'match': '\\b(\\/|-|\\+|=|!=|<=|>=|\\*|NOT|MOD|AND|OR|DIV|>|<)\\b'
     'comment': 'match 2-character operator first'
-    'name': 'keyword.operator.js'
+    'name': 'keyword.operator.sdo'
   }
   {
     'begin': '(?<=[\\[=(:+,!]|^|return|&&|\\|\\|)\\s*(/)(?![/*+{}?])(?=.*/)'
     'beginCaptures':
       '1':
-        'name': 'punctuation.definition.string.begin.js'
+        'name': 'punctuation.definition.string.begin.sdo'
     'end': '(/)[gimuy]*'
     'endCaptures':
       '1':
-        'name': 'punctuation.definition.string.end.js'
-    'name': 'string.regexp.js'
+        'name': 'punctuation.definition.string.end.sdo'
+    'name': 'string.regexp.sdo'
     'patterns': [
       {
-        'include': 'source.js.regexp'
+        'include': 'source.sdo.regexp'
       }
     ]
   }
   {
     'match': ','
-    'name': 'meta.delimiter.object.comma.js'
+    'name': 'meta.delimiter.object.comma.sdo'
   }
   {
     'match': '\\.'
-    'name': 'meta.delimiter.method.period.js'
+    'name': 'meta.delimiter.method.period.sdo'
   }
   {
     'captures':
       '1':
-        'name': 'punctuation.section.scope.begin.js'
+        'name': 'punctuation.section.scope.begin.sdo'
       '2':
-        'name': 'punctuation.section.scope.end.js'
+        'name': 'punctuation.section.scope.end.sdo'
     'comment': 'Allows the special return snippet to fire.'
     'match': '(\\{)(\\})'
   }
   {
     'match': '\\{|\\}'
-    'name': 'meta.brace.curly.js'
+    'name': 'meta.brace.curly.sdo'
   }
   {
     'match': '\\(|\\)'
-    'name': 'meta.brace.round.js'
+    'name': 'meta.brace.round.sdo'
   }
   {
     'match': '\\[|\\]'
-    'name': 'meta.brace.square.js'
+    'name': 'meta.brace.square.sdo'
   }
   {
     'match': '\\A#!.*$'
-    'name': 'comment.line.shebang.js'
+    'name': 'comment.line.shebang.sdo'
   }
 ]
 'repository':
@@ -125,16 +125,16 @@
         'begin': '\''
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.string.begin.js'
+            'name': 'punctuation.definition.string.begin.sdo'
         'end': '\''
         'endCaptures':
           '0':
-            'name': 'punctuation.definition.string.end.js'
-        'name': 'string.quoted.single.js'
+            'name': 'punctuation.definition.string.end.sdo'
+        'name': 'string.quoted.single.sdo'
         'patterns': [
           {
             'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
-            'name': 'constant.character.escape.js'
+            'name': 'constant.character.escape.sdo'
           }
         ]
       }
@@ -142,16 +142,16 @@
         'begin': '"'
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.string.begin.js'
+            'name': 'punctuation.definition.string.begin.sdo'
         'end': '"'
         'endCaptures':
           '0':
-            'name': 'punctuation.definition.string.end.js'
-        'name': 'string.quoted.double.js'
+            'name': 'punctuation.definition.string.end.sdo'
+        'name': 'string.quoted.double.sdo'
         'patterns': [
           {
             'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)'
-            'name': 'constant.character.escape.js'
+            'name': 'constant.character.escape.sdo'
           }
         ]
       }
@@ -159,16 +159,16 @@
         'begin': '`'
         'beginCaptures':
           '0':
-            'name': 'punctuation.definition.string.begin.js'
+            'name': 'punctuation.definition.string.begin.sdo'
         'end': '`'
         'endCaptures':
           '0':
-            'name': 'punctuation.definition.string.end.js'
-        'name': 'string.quoted.template.js'
+            'name': 'punctuation.definition.string.end.sdo'
+        'name': 'string.quoted.template.sdo'
         'patterns': [
           {
             'match': '\\\\(x\\h{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)'
-            'name': 'constant.character.escape.js'
+            'name': 'constant.character.escape.sdo'
           }
         ]
       }
@@ -179,21 +179,21 @@
         'begin': '/\\*\\*(?!/)'
         'captures':
           '0':
-            'name': 'punctuation.definition.comment.js'
+            'name': 'punctuation.definition.comment.sdo'
         'patterns': [
           {
             'include': '#docblock'
           }
         ]
         'end': '\\*/'
-        'name': 'comment.block.documentation.js'
+        'name': 'comment.block.documentation.sdo'
       }
       {
         'begin': '/\\*'
         'captures':
           '0':
-            'name': 'punctuation.definition.comment.js'
+            'name': 'punctuation.definition.comment.sdo'
         'end': '\\*/'
-        'name': 'comment.block.js'
+        'name': 'comment.block.sdo'
       }
     ]
