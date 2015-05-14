@@ -1,0 +1,23 @@
+{
+  "name": "language-pseudo",
+  "version": "0.0.0",
+  "description": "Adds syntax highlighting support for pseudocode.",
+  "homepage": "https://github.com/TheoMessin/language-pseudo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheoMessin/language-pseudo"
+  },
+  "keywords": [
+    "international baccalaureate",
+    "ib",
+    "pseudocode"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheoMessin/language-pseudo/issues"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}
