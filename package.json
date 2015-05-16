@@ -1,6 +1,6 @@
 {
   "name": "language-pseudo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Adds syntax highlighting support for pseudocode.",
   "homepage": "https://github.com/TheoMessin/language-pseudo",
   "repository": {
