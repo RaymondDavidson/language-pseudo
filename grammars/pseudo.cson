@@ -61,7 +61,7 @@
     'captures':
       '1':
         'name': 'support.function.sdo'
-    'match': '(?!>\\S)(\\boutput)(\\s)'
+    'match': '(?!>\\S)(\\binput)(\\s)'
   }
   {
     'match': '\\/|-|\\+|=|!=|<=|>=|\\*|>|<'
