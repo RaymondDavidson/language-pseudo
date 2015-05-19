@@ -64,8 +64,11 @@
     'match': '(?!>\\S)(\\boutput)(\\s)'
   }
   {
-    'match': '\\b(\\/|-|\\+|=|!=|<=|>=|\\*|NOT|MOD|AND|OR|DIV|>|<)\\b'
-    'comment': 'match 2-character operator first'
+    'match': '\\/|-|\\+|=|!=|<=|>=|\\*|>|<'
+    'name': 'keyword.operator.sdo'
+  }
+  {
+    'match': '\\b(NOT|MOD|AND|OR|DIV)\\b'
     'name': 'keyword.operator.sdo'
   }
   {
