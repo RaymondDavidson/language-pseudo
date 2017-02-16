@@ -2,6 +2,7 @@
 'fileTypes': [
   'sdo'
   'pseudo'
+  'psx'
   ]
 'name': 'IB PseudoCode'
 'patterns': [
